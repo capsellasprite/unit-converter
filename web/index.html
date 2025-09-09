@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>単位変換ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>単位変換ツール</h1>
+        
+        <!-- 温度変換セクション -->
+        <div class="converter-section">
+            <h2>温度変換</h2>
+            <div class="input-group">
+                <input type="number" id="celsius-input" placeholder="摂氏温度を入力" 
+                    onkeypress="checkEnter(event, 'celsius')">
+                <span>°C</span>
+                <button onclick="convertCelsius()">→</button>
+                <span id="fahrenheit-result">--</span>
+                <span>°F</span>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="fahrenheit-input" placeholder="華氏温度を入力"
+                    onkeypress="checkEnter(event, 'fahrenheit')">
+                <span>°F</span>
+                <button onclick="convertFahrenheit()">→</button>
+                <span id="celsius-result">--</span>
+                <span>°C</span>
+            </div>
+        </div>
+        <!-- 距離変換セクション -->
+        <div class="converter-section">
+            <h2>距離変換</h2>
+            <div class="input-group">
+                <input type="number" id="km-input" placeholder="kmを入力" 
+                    onkeypress="checkEnter(event, 'km')">
+                <span>km</span>
+                <button onclick="convertKm()">→</button>
+                <span id="mile-result">--</span>
+                <span>mile</span>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="mile-input" placeholder="mileを入力"
+                    onkeypress="checkEnter(event, 'mile')">
+                <span>mile</span>
+                <button onclick="convertMile()">→</button>
+                <span id="km-result">--</span>
+                <span>km</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
